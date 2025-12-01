@@ -1,19 +1,29 @@
-import React from 'react'
-import Card from '../components/ui/card'
+import { useNavigate } from 'react-router-dom';
+import Card from '../components/UI/card'; // Adjust path if needed
 
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <div className="space-y-6">
-      <h2 className="text-2xl font-bold">Welcome to VoiceCraftHub</h2>
+      <h1 className="text-2xl font-bold">Welcome to VoiceCraftHub</h1>
       <p>
         An international platform for voice training and certifications.
-        Explore programs in Spoken English, Public Speaking, Podcasting, and Vocal Singing.
+        Explore programs in <em>Spoken English</em>, Public Speaking, Podcasting, and Vocal Singing.
       </p>
       <Card title="Get Started">
-        <p>Enroll today and begin your journey with certified programs.</p>
+        <p className="mb-4">
+          Enroll today and begin your journey with <em>certified programs</em>.
+        </p>
+        <button
+          onClick={() => navigate('/enroll')}
+          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        >
+          Enroll Now
+        </button>
       </Card>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;
