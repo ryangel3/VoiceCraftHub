@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import Card from '../components/UI/card'; // Adjust path if needed
+import Card from '../components/ui/card'; // Adjust path if needed
 
 function Home() {
   const navigate = useNavigate();
